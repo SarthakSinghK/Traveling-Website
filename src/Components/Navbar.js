@@ -1,4 +1,7 @@
-import React from 'react'
+import React from "react";
+import logopic from "../images/logo.svg";
+import { pagelinks,socialLinks} from "../data";
+// import { } from "../data";
 
 const Navbar = () => {
   return (
@@ -6,75 +9,42 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="nav-center">
           <div className="nav-header">
-            <img src="./images/logo.svg" className="nav-logo" alt="backroads" />
+            <img src={logopic} className="nav-logo" alt="backroads" />
             <button type="button" className="nav-toggle" id="nav-toggle">
               <i className="fas fa-bars"></i>
             </button>
           </div>
-          {/* <!-- left this comment on purpose --> */}
+          {/* <!-- left this comment on purpose --> */} 
+
+
+
           <ul className="nav-links" id="nav-links">
-            <li>
-              <a href="#home" className="nav-link">
-                {" "}
-                home{" "}
-              </a>
-            </li>
-
-            <li>
-              <a href="#about" className="nav-link">
-                {" "}
-                about{" "}
-              </a>
-            </li>
-
-            <li>
-              <a href="#services" className="nav-link">
-                {" "}
-                services{" "}
-              </a>
-            </li>
-
-            <li>
-              <a href="#tours" className="nav-link">
-                {" "}
-                tours
-              </a>
-            </li>
+            {pagelinks.map((linku) => {
+              return (
+                <li key={linku.id}>
+                  <a href={linku.hre} className="nav-link">
+                    {linku.txt}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
 
           <ul className="nav-icons">
-            <li>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                className="nav-icon"
-              >
-                <i className="fab fa-facebook"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                className="nav-icon"
-              >
-                <i className="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                className="nav-icon"
-              >
-                <i className="fab fa-squarespace"></i>
-              </a>
-            </li>
+            {socialLinks.map((scil) => {
+              const  {id, hre, icn}= scil;
+              return (<li key={id}>
+                <a href={hre} target="_blank" className="nav-icon">
+                  <i className={icn}></i>
+                </a>
+              </li>)
+            })}
           </ul>
+
         </div>
       </nav>
     </>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

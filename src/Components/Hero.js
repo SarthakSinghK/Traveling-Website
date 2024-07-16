@@ -4,10 +4,11 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-banner">
-        <h1>continue exploring</h1>
+        <h1>Route 66</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-          explicabo debitis est autem dicta.
+          Explore the iconic Route 66 with our expert travel guides, inspired by
+          the adventures in the movie 'Cars.' Discover hidden gems and create
+          unforgettable memories.
         </p>
         <a href="#tours" className="btn hero-btn">
           explore tours
