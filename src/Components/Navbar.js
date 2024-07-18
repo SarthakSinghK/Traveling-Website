@@ -18,7 +18,7 @@ const Navbar = () => {
           </div>
 
           <Pagelinks classnams="nav-links" classnam="nav-link" />
-          <Sociallinks parentclass="nav-icons" childclass="nav-icon" />
+          <Sociallinks parentclassName="nav-icons" childclassName="nav-icon" />
           {/* <!-- left this comment on purpose --> */}
         </div>
       </nav>

@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <footer className="section footer">
       <Pagelinks classnams="footer-links" classnam="footer-link" />
-      <Sociallinks parentclass="footer-icons" childclass="footer-icon"/>
-      <p class="copyright">
+      <Sociallinks parentclassName="footer-icons" childclassName="footer-icon"/>
+      <p className="copyright">
         copyright &copy; Backroads travel tours company
         <span id="date">{new Date().getFullYear()}</span> all rights reserved
       </p>
