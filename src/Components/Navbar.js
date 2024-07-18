@@ -1,6 +1,8 @@
 import React from "react";
 import logopic from "../images/logo.svg";
-import { pagelinks, socialLinks } from "../data";
+import Pagelinks from "./Pagelinks";
+import Sociallinks from "./Sociallinks";
+
 // import { } from "../data";
 
 const Navbar = () => {
@@ -14,32 +16,10 @@ const Navbar = () => {
               <i className="fas fa-bars"></i>
             </button>
           </div>
+
+          <Pagelinks classnams="nav-links" classnam="nav-link" />
+          <Sociallinks parentclass="nav-icons" childclass="nav-icon" />
           {/* <!-- left this comment on purpose --> */}
-
-          <ul className="nav-links" id="nav-links">
-            {pagelinks.map((linku) => {
-              return (
-                <li key={linku.id}>
-                  <a href={linku.hre} className="nav-link">
-                    {linku.txt}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-
-          <ul className="nav-icons">
-            {socialLinks.map((scil) => {
-              const { id, hre, icn } = scil;
-              return (
-                <li key={id}>
-                  <a href={hre} target="_blank" className="nav-icon">
-                    <i className={icn}></i>
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
         </div>
       </nav>
     </>

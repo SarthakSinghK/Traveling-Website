@@ -1,25 +1,19 @@
 import React from "react";
 import Title from "./Title";
 import { servicelinks } from "../data";
+import Service from "./Service";
 const Services = () => {
   return (
     <section className="section services" id="services">
       <Title head1="our" head2="services" />
 
+
+
       <div className="section-center services-center">
         {servicelinks.map((linked) => {
-          const { id, icon, text, title } = linked;
           return (
-            <article className="service" key={id}>
-              <span className="service-icon">
-                <i className={icon}></i>
-              </span>
-              <div className="service-info">
-                <h4 className="service-title">{title}</h4>
-                <p className="service-text">{text}</p>
-              </div>
-            </article>
-          );
+            <Service key={linked.id} {...linked}/>
+          )
         })}
       </div>
     </section>
